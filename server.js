@@ -1,12 +1,21 @@
 var http = require("http");
 
+//Server 1
 http.createServer(function (request, response) {
 
   response.writeHead(200, {'Content-Type': 'text'});
-  response.end('Ayyyy, this works!!!');
+  response.end('Your code is dirty.');
 
-}).listen(3000);
-console.log("Test");
+}).listen(7500);
 
-// Console will print the message
-console.log('Server running at http://localhost:3000/');
+console.log('Server running at http://localhost:7500/');
+
+//Server 2
+http.createServer(function (request, response){
+
+  response.writeHead(200, {'Content-Type': 'text'});
+  response.end('Your code is clean.')
+
+}).listen(7000);
+
+console.log('Server running at http://localhost:7000/')
